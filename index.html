@@ -40,7 +40,12 @@
             .then(data => {
                 console.log(data);
                 console.log(data.joke);
+                if(data.type == 'single'){
                 joke.textContent = data.joke;
+                }
+                if(data.type == 'twopart'){
+                joke.textContent = data.setup + "..." + data.delivery
+                }
                 title.textContent = 'A Random Programming Joke'
             });
         });
