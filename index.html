@@ -27,10 +27,10 @@
             console.log(data);
             console.log(data.joke);
             if(data.type == 'single'){
-            joke.textContent = data.joke;
+                joke.textContent = data.joke;
             }
             if(data.type == 'twopart'){
-            joke.textContent = data.setup + "..." + data.delivery
+                joke.textContent = data.setup + "..." + data.delivery
             }
     });
 
@@ -41,10 +41,10 @@
                 console.log(data);
                 console.log(data.joke);
                 if(data.type == 'single'){
-                joke.textContent = data.joke;
+                    joke.textContent = data.joke;
                 }
                 if(data.type == 'twopart'){
-                joke.textContent = data.setup + "..." + data.delivery
+                    joke.textContent = data.setup + "..." + data.delivery
                 }
                 title.textContent = 'A Random Programming Joke'
             });
@@ -56,7 +56,12 @@
             .then(data => {
                 console.log(data);
                 console.log(data.joke);
-                joke.textContent = data.joke;
+                if(data.type == 'single'){
+                    joke.textContent = data.joke;
+                }
+                if(data.type == 'twopart'){
+                    joke.textContent = data.setup + "..." + data.delivery
+                }
                 title.textContent = 'A Random Miscellaneous Joke'
             });
         });
@@ -67,7 +72,12 @@
             .then(data => {
                 console.log(data);
                 console.log(data.joke);
-                joke.textContent = data.joke;
+                if(data.type == 'single'){
+                    joke.textContent = data.joke;
+                }
+                if(data.type == 'twopart'){
+                    joke.textContent = data.setup = "..." + data.delivery              
+                }
                 title.textContent = 'A Random Pun'
             });
         });
@@ -78,7 +88,12 @@
             .then(data => {
                 console.log(data);
                 console.log(data.joke);
-                joke.textContent = data.joke;
+                if(data.type == 'single'){
+                    joke.textContent = data.joke;
+                }
+                if(data.type == 'twopart'){
+                    joke.textContent = data.setup + "..." + data.delivery
+                }
                 title.textContent = 'A Random Spooky Joke'
             });
         });
@@ -89,7 +104,12 @@
             .then(data => {
                 console.log(data);
                 console.log(data.joke);
-                joke.textContent = data.joke;
+                if(data.type == 'single'){
+                    joke.textContent = data.joke;
+                }
+                if(data.type == 'twopart'){
+                    joke.textContent = data.setup + "..." + data.delivery
+                }
                 title.textContent = 'A Random Christmas Joke'
             });
         });
