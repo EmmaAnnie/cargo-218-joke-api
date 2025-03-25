@@ -50,6 +50,17 @@
                 title.textContent = 'Miscellaneous Joke'
             });
         });
+
+        pun.addEventListener('click', function(){
+            fetch('https://v2.jokeapi.dev/joke/Pun?safe-mode')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                console.log(data.joke);
+                joke.textContent = data.joke;
+                title.textContent = 'Pun of The Day'
+            });
+        });
     </script>
 </body>
 </html>
