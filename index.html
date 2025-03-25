@@ -26,8 +26,13 @@
         .then(data => {
             console.log(data);
             console.log(data.joke);
+            if(data.type == 'single'){
             joke.textContent = data.joke;
-        });
+            }
+            if(data.type == 'twopart'){
+            joke.textContent = data.setup + "..." + data.delivery
+            }
+    });
 
         programming.addEventListener('click', function(){
             fetch('https://v2.jokeapi.dev/joke/Programming?safe-mode')
@@ -81,8 +86,8 @@
                 console.log(data.joke);
                 joke.textContent = data.joke;
                 title.textContent = 'A Random Christmas Joke'
-            })
-        })
+            });
+        });
     </script>
 </body>
 </html>
