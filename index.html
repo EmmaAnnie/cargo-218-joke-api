@@ -61,6 +61,17 @@
                 title.textContent = 'Pun of The Day'
             });
         });
+
+        spooky.addEventListener('click', function(){
+            fetch('https://v2.jokeapi.dev/joke/Spooky?safe-mode')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                console.log(data.joke);
+                joke.textContent = data.joke;
+                title.textContent = 'Spooky Joke'
+            });
+        });
     </script>
 </body>
 </html>
